@@ -1,7 +1,15 @@
 ﻿using CodingTracker.basemkasem;
 using System.Configuration;
 
-string connectionString = ConfigurationManager.AppSettings.Get("ConnectionString");
+internal class Program
+{
+    public static string? connectionString = ConfigurationManager.AppSettings.Get("ConnectionString");
+    private static void Main(string[] args)
+    {
+        DatabaseManeger databaseManeger = new();
+        databaseManeger.CreateDatabase(connectionString!);
 
-DatabaseManeger databaseManeger = new();
-databaseManeger.CreateDatabase(connectionString);
+        UserInput userInput = new();
+        userInput.MainMenu();
+    }
+}
