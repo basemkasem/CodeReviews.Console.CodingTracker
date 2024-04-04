@@ -1,4 +1,7 @@
 ﻿using CodingTracker.basemkasem;
+using System.Configuration;
 
-DatabaseManeger databaseManeger = new DatabaseManeger();
-databaseManeger.CreateDatabase();
+string connectionString = ConfigurationManager.AppSettings.Get("ConnectionString");
+
+DatabaseManeger databaseManeger = new();
+databaseManeger.CreateDatabase(connectionString);
