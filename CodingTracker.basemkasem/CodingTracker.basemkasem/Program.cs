@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("update");
+﻿using CodingTracker.basemkasem;
+
+DatabaseManeger databaseManeger = new DatabaseManeger();
+databaseManeger.CreateDatabase();
