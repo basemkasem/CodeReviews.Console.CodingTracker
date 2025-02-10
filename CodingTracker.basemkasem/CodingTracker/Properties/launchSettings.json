@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "CodingTracker": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\Career\\BackEndCourses\\Projects\\Studying\\CodingTracker\\CodingTracker",
+      "remoteDebugEnabled": false
+    }
+  }
+}
