@@ -1,6 +1,4 @@
 ﻿namespace CodingTracker;
-
-
 enum MenuOptions
 {
     AddSession,
@@ -9,7 +7,6 @@ enum MenuOptions
     DeleteSession,
     Exit
 }
-
 enum UpdateOptions
 {
     UpdateStartTime,

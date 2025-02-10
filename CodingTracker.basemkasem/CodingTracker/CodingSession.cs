@@ -11,7 +11,6 @@ internal class CodingSession
         {
             return(int)(EndTime - StartTime).TotalSeconds;
         }
-        set { }
     }
 
     public CodingSession(){ }
@@ -23,8 +22,6 @@ internal class CodingSession
         {
             EndTime = endTime;
         }
-        Duration = (int)(endTime - startTime).TotalSeconds;
-
     }
 
     public override string ToString()
