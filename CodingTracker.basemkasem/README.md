@@ -1,8 +1,6 @@
 # Coding Tracker
 
-## 📖 Overview
-
-Coding Tracker is a console application that helps developers log and track their coding sessions. It allows users to record start and end times, calculate the duration, and store the data in an SQLite database.
+Coding Tracker is a console app that logs coding sessions, tracks duration, and stores data in an SQLite database.
 
 ## ✨ Features
 
@@ -23,18 +21,21 @@ Coding Tracker is a console application that helps developers log and track thei
 ## 🔧 Installation
 
 1. **Clone the Repository**
+
    ```sh
    git clone https://github.com/basemkasem/CodeReviews.Console.CodingTracker
    cd CodingTracker
    ```
 
 2. **Install Dependencies**
+
    Run the following command to install required NuGet packages:
    ```sh
    dotnet restore
    ```
 
 3. **Build the Project**
+
    ```sh
    dotnet build
    ```
@@ -53,7 +54,7 @@ Coding Tracker is a console application that helps developers log and track thei
 
 ## 📂 Database Structure
 
-The project uses an SQLite database file (`coding-tracker.db`) with the following table:
+The project uses an SQLite database file (`coding-tracker.db`) with the table:
 
 ```sql
 CREATE TABLE IF NOT EXISTS CodingSessions (
@@ -66,5 +67,5 @@ CREATE TABLE IF NOT EXISTS CodingSessions (
 
 ## 📚 Project Source
 
-This project was inspired by the **Coding Tracker** project from [The C# Academy](https://www.thecsharpacademy.com/project/13/coding-tracker). It serves as a learning exercise for improving C# skills, working with databases, and building real-world console applications.
+This project was inspired by the **Coding Tracker** project from [The C# Academy](https://www.thecsharpacademy.com/project/13/coding-tracker). It helps improve C# skills, database work, and console app development.
 
