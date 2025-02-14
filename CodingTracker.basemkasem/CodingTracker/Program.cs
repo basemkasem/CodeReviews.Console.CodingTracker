@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-using System.Collections.Specialized;
-using Spectre.Console;
+﻿using Spectre.Console;
 using CodingTracker;
 
 DatabaseHelper.CreateTable();

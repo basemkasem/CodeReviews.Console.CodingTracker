@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using Dapper;
+﻿using Dapper;
 using Microsoft.Data.Sqlite;
 
 namespace CodingTracker;
@@ -17,7 +16,7 @@ internal class DatabaseHelper
 
     public static string GetConnectionString()
     {
-        string? connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        string? connectionString = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
         if (string.IsNullOrWhiteSpace(connectionString))
         {
             throw new InvalidOperationException("Error: Connection string is not configured.");

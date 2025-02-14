@@ -1,5 +1,4 @@
 # Coding Tracker
-
 Coding Tracker is a console app that logs coding sessions, tracks duration, and stores data in an SQLite database.
 
 ## ✨ Features
