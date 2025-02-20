@@ -1,4 +1,5 @@
-﻿using Spectre.Console;
+﻿using System.Globalization;
+using Spectre.Console;
 
 namespace CodingTracker;
 
@@ -9,6 +10,12 @@ internal class TableVisualisation
         var table = new Table();
         var sessions = DatabaseHelper.TableList();
 
+        if (sessions.Count == 0)
+        {
+            AnsiConsole.Markup("[red]No records found. You need to add a session first.[/]\n");
+            return;
+        }
+
         table.AddColumn("ID");
         table.AddColumn("Start Time");
         table.AddColumn("End Time");
@@ -16,7 +23,7 @@ internal class TableVisualisation
 
         foreach (var session in sessions)
         {
-            table.AddRow(session.Id.ToString(), session.StartTime.ToString(), session.EndTime.ToString(), TimeSpan.FromSeconds(session.Duration).ToString());
+            table.AddRow(session.Id.ToString(), session.StartTime.ToString(CultureInfo.GetCultureInfo("fr-FR")), session.EndTime.ToString(CultureInfo.GetCultureInfo("fr-FR")), TimeSpan.FromSeconds(session.Duration).ToString());
         }
         AnsiConsole.Write(table);
     }

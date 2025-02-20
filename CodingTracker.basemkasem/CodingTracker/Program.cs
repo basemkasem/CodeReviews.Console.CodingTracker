@@ -12,7 +12,7 @@ while(true)
                 .Title("What would you like to do?")
                 .AddChoices(Enum.GetValues<MenuOptions>())
         );
-
+    Console.Clear();
     switch (option)
     {
         case MenuOptions.AddSession:

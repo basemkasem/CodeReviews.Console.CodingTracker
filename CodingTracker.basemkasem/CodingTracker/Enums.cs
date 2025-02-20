@@ -12,3 +12,9 @@ enum UpdateOptions
     UpdateStartTime,
     UpdateEndTime
 }
+
+enum DeleteOptions
+{
+    DeleteRecord,
+    DeleteAll
+}
