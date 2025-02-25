@@ -36,7 +36,7 @@ internal class SessionController
     public static void AddSession()
     {
         AnsiConsole.Markup("[bold]Add a new coding session[/]\n" +
-            "[yellow]Make sure to right time in this format (dd-MM-yyyy hh:mm) or (hh:mm)[/]\n");
+            "[yellow]Make sure to right time in this format (dd/MM/yyyy hh:mm)[/]\n");
         DateTime startTime = PromptForTime("Enter start time: ");
         DateTime endTime = PromptForTime("Enter end time: ");
         while (endTime < startTime)
@@ -60,7 +60,7 @@ internal class SessionController
         while (newStartTime > session.StartTime)
         {
             AnsiConsole.Markup("[red]Start time cannot be later than end time. Please enter a valid end time.[/]\n");
-            newStartTime = PromptForTime("Enter start time (dd-MM-yyyy hh:mm): ");
+            newStartTime = PromptForTime("Enter start time (dd/MM/yyyy hh:mm): ");
         }
         
         session.StartTime = newStartTime;
@@ -82,7 +82,7 @@ internal class SessionController
         while (newEndTime < session.EndTime)
         {
             AnsiConsole.Markup("[red]End time cannot be earlier than start time. Please enter a valid end time.[/]\n");
-            newEndTime = PromptForTime("Enter end time (hh:MM): ");
+            newEndTime = PromptForTime("Enter end time (dd/MM/yyyy hh:mm): ");
         }
         session.EndTime = newEndTime;
 
